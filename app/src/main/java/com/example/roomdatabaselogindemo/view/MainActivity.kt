@@ -1,9 +1,9 @@
 package com.example.roomdatabaselogindemo.view
 
+import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
-import androidx.compose.runtime.snapshots.Snapshot.Companion.observe
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -15,9 +15,7 @@ import com.example.roomdatabaselogindemo.model.database.DatabaseForSubscribers
 import com.example.roomdatabaselogindemo.model.database.Subscriber
 import com.example.roomdatabaselogindemo.repository.SubscriberRepository
 import com.example.roomdatabaselogindemo.adapter.SubscriberAdapter
-import com.example.roomdatabaselogindemo.viewmodel.Event
 import com.example.roomdatabaselogindemo.viewmodel.SubscriberViewModel
-import android.widget.Toast.makeText as makeText1
 
 class MainActivity : AppCompatActivity() {
 
@@ -76,6 +74,7 @@ class MainActivity : AppCompatActivity() {
      * We are setting the list from the setList method we created in our adapter
      * class.
      */
+    @SuppressLint("NotifyDataSetChanged")
     private fun displaySubscribers() {
         viewModel.subscribers.observe(this@MainActivity, Observer {
             // Set the List
