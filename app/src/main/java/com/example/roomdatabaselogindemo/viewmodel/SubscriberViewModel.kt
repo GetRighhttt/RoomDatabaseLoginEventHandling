@@ -58,9 +58,9 @@ class SubscriberViewModel(private val repository: SubscriberRepository): ViewMod
      */
     fun saveOrUpdate() {
 
-        if(inputName.value == null) {
+        if(inputName.value!!.isEmpty()) {
             _statusMessage.value = Event("Please Enter Subscriber's Name:")
-        } else if (inputEmail.value == null){
+        } else if (inputEmail.value!!.isEmpty()){
             _statusMessage.value = Event("Please Enter Subscriber's Email:")
             // Email validation example
         } else if(!Patterns.EMAIL_ADDRESS.matcher(inputEmail.value!!).matches()){
