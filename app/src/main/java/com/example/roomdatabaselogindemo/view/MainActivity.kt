@@ -56,6 +56,10 @@ class MainActivity : AppCompatActivity() {
          * updated.
          *
          * Essentially will notify the user when something is saved to the database.
+         *
+         * getContentIfNotHandled() is a method that is defined in our Event class
+         * that is essentially boilerplate code. This method was not made private so we
+         * can directly access it from anywhere in our code.
          */
         viewModel.message.observe(this, Observer { it ->
             it?.getContentIfNotHandled()?.let {
