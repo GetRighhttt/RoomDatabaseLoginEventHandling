@@ -14,7 +14,16 @@ import com.example.roomdatabaselogindemo.model.database.Subscriber
 // Adding Dao as a constructor because we are going to call their functions
 class SubscriberRepository(private val dao: DAO) {
 
-    // defining a variable of LiveData for all the subscribers
+    /**
+     * Here we have to get all the subscribers in order for us to define methods
+     * needed for our ViewModel business logic.
+     *
+     * The repository usually doesn't includes Logic. Just define methods.
+     *
+     * We return a value here so we can use it for validation of events,
+     * and letting the user know when the database has been updated.
+     * We will see it more in the ViewModel.
+      */
     val subscribers = dao.getAllSubscribers()
 
     // defining method to insert into our database

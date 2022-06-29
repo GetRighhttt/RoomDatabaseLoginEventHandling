@@ -17,6 +17,9 @@ import java.nio.file.Files.delete
  * In this scenario, because we have a repository, we will pass that as a
  * parameter to implement the methods needed from our DAO class.
  * Those methods were created and defined in our repository.
+ *
+ * We will also implement validation checks with the return values used in our entity table,
+ * DAO interface, and our repository.
  */
 
 class SubscriberViewModel(private val repository: SubscriberRepository): ViewModel() {
@@ -34,11 +37,12 @@ class SubscriberViewModel(private val repository: SubscriberRepository): ViewMod
     val saveButton = MutableLiveData<String>("")
     val deleteButton = MutableLiveData<String>("")
 
-    // Mutable LiveData backing property for the status message
+    // Mutable LiveData backing property for the status message for validation
     private val _statusMessage = MutableLiveData<Event<String>>()
     val message: LiveData<Event<String>>
     get() = _statusMessage
 
+    // initializer block to set the text for our buttons
     init {
         saveButton.value = "Save"
         deleteButton.value = "Clear All"
@@ -161,7 +165,11 @@ class SubscriberViewModel(private val repository: SubscriberRepository): ViewMod
         }
 
     /**
-     * Method initiate to Update and Delete the list item when the user clicks on the items.
+     * Method initiate to change the text of the button when the user Updates or Deletes
+     * the list item after they click on them.
+     *
+     * This method is how the text enters the name and email fields when the user clicks
+     * on a subscriber. And how the buttons change their text.
      */
     fun initUpdateAndDelete(subscriber: Subscriber) {
         inputName.value = subscriber.name

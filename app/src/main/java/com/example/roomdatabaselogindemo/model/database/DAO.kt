@@ -19,6 +19,10 @@ interface DAO {
      * And also to use these in the background.
      * onConflictStrategy will try to insert, and if there's an existing
      * row, it will replace it.
+     *
+     * We're returning a value for our DAO for validation purposes.
+     * Essentially have to return something so we can know inform the user
+     * when something has been updated, deleted, or inserted into the database.
      */
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
