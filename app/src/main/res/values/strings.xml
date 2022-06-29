@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">RoomDatabaseLoginDemo</string>
+    <string name="name">Name:</string>
+    <string name="email">Email:</string>
+    <string name="delete">Delete</string>
+    <string name="update">Update</string>
+    <string name="textview">TextView</string>
+    <string name="tvone">TextView</string>
+</resources>
