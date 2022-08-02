@@ -3,7 +3,7 @@
 <p>ROOM database example which handles user login events.<br>
 It saves the users into a recyclerview along with their ID<br>
 into the database, and updates the database consistenly when<br>
-deleted fromt he list.</p>
+deleted from the list.</p>
 
 ### APP PREVIEW :
 
