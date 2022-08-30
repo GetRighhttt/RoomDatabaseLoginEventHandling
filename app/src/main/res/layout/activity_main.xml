@@ -23,7 +23,6 @@
 <!--        To update the name and email with LiveData.-->
         <EditText
             android:ems="10"
-            android:fontFamily="casual"
             android:hint="@string/name"
             android:id="@+id/name"
             android:inputType="textPersonName"
@@ -37,7 +36,6 @@
 
         <EditText
             android:ems="10"
-            android:fontFamily="casual"
             android:hint="@string/email"
             android:id="@+id/email"
             android:inputType="textEmailAddress"
@@ -64,7 +62,6 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:elevation="30dp"
-                android:fontFamily="casual"
                 android:onClick="@{() -> viewModelXML.saveOrUpdate()}"
                 android:text="@={viewModelXML.saveButton}"
                 android:textSize="20sp"
@@ -81,7 +78,6 @@
                 android:layout_margin="5dp"
                 android:layout_weight="1"
                 android:elevation="30dp"
-                android:fontFamily="casual"
                 android:onClick="@{() -> viewModelXML.clearOrDelete()}"
                 android:text="@={viewModelXML.deleteButton}"
                 android:textSize="20sp"

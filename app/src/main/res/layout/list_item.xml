@@ -38,7 +38,6 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:fontFamily="casual"
                     android:id="@+id/name_tv"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
@@ -57,7 +56,6 @@
                     android:backgroundTint="@color/black"/>
 
                 <TextView
-                    android:fontFamily="casual"
                     android:id="@+id/email_tv"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="8dp"
